@@ -1,4 +1,5 @@
 .admin-view { min-height: 100vh; background: #f5f3ee; color: #202925; font-family: "DM Sans", Arial, sans-serif; }
+body.admin-active > .site-header[hidden], body.admin-active > #main[hidden] { display: none !important; }
 .admin-view * { box-sizing: border-box; }
 .admin-shell { width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 34px 0 64px; }
 .back-link { color: #202925; text-decoration: none; font-size: 14px; }
