@@ -9,3 +9,22 @@
 @media(max-width:430px){.resume-certifications article{grid-template-columns:1fr;gap:4px}.skill-row{grid-template-columns:21px 1fr auto}.skill-row strong{font-size:10px}.skill-row small{font-size:7px}}
 .profile-panel{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:38px 42px;background:#e7e8de;color:var(--ink)}.panel-kicker{font:500 9px var(--mono);letter-spacing:.1em;color:#73786e}.profile-monogram{width:96px;height:96px;margin:22px 0 14px;border-radius:50%;display:grid;place-items:center;background:#29332d;color:var(--green);font:500 32px var(--mono);letter-spacing:-.08em}.profile-panel h2{font:700 27px/1.2 var(--display);letter-spacing:-.06em;margin:0}.profile-panel>p{font-size:12px;color:#777b73;margin:4px 0 18px}.profile-facts{width:100%;border-top:1px solid #cfd1c6}.profile-facts>div{display:grid;grid-template-columns:85px 1fr;gap:10px;padding:9px 0;border-bottom:1px solid #cfd1c6}.profile-facts span{font:500 8px var(--mono);letter-spacing:.06em;color:#80857a}.profile-facts strong{font:500 10px var(--display)}.profile-panel>a{font-size:10px;font-weight:600;border-bottom:1px solid #9da294;padding-bottom:2px;margin-top:16px}.timeline-item{grid-template-columns:.7fr 2fr}.contact-note{max-width:350px;color:#c8cec3;font-size:12px;margin:-15px 0 24px}
 @media(max-width:760px){.profile-panel{height:390px;padding:30px 32px;max-width:410px}.timeline-item{grid-template-columns:1fr}.timeline-date,.timeline-main{grid-column:1}}
+.project-visual{display:block;isolation:isolate}.project-photo{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;z-index:-2}.project-visual:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(16,21,19,.48),transparent 30%,transparent 62%,rgba(16,21,19,.55))}.project-visual .visual-label{color:white;text-shadow:0 1px 5px rgba(0,0,0,.55)}.project-visual .visual-index{z-index:1;color:rgba(255,255,255,.76)}
+
+footer>a:first-child{margin-left:auto}
+
+.profile-photo{width:142px;height:142px;margin:20px 0 14px;border-radius:50%;object-fit:cover;object-position:center;display:block}
+
+.profile-panel{height:auto;min-height:490px}
+@media(max-width:760px){.profile-panel{height:auto;min-height:0}}
+
+.education-score{margin:8px 0 0!important;color:var(--ink)!important;font-weight:600}.education-score span{color:var(--muted)}
+
+.certificate-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.certificate-card{grid-template-columns:1fr;align-content:start;gap:12px}.certificate-card>a{width:100%}.certificate-card img{aspect-ratio:1.55;object-fit:contain}.certificate-card>div{padding:0 2px 4px}
+@media(max-width:900px){.certificate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.certificate-grid{grid-template-columns:1fr}.certificate-card{grid-template-columns:120px 1fr}.certificate-card img{aspect-ratio:1.38}}
+
+/* Readability pass: larger body copy, labels, and stronger contrast on light surfaces. */
+body{font-size:16px;line-height:1.7}.section-label{font-size:10px}.eyebrow,.hero-meta,.project-type,.timeline-date,.patent-kicker,.certificate-card>div>span,.contact-details>div>span,footer>a:last-child{font-size:10px}.hero-intro{font-size:16px}.about-copy{font-size:15px}.edu-heading p,.work-heading p{font-size:13px}.timeline-main p{font-size:13px}.timeline-main p span{color:#62675f}.timeline-date,.project-type,.patent-kicker,.certificate-card>div>span,.skill-row>span,.skill-row small,.fine-print,.edu-heading p,.work-heading p,.timeline-main p,.project-info p,.patent-copy p,.certificate-card p{color:#62675f}.chips span{font-size:10px}.skill-content>p{font-size:14px}.skill-row strong{font-size:13px}.skill-row>span,.skill-row small{font-size:10px}.skill-content .fine-print{font-size:11px}.project-info h3{font-size:19px}.project-info p{font-size:12px}.patent-copy h3{font-size:18px}.patent-copy p{font-size:12px}.patent-copy .patent-meta{font-size:11px}.patent-copy .text-link{font-size:12px}.certificate-card h4{font-size:14px}.certificate-card p{font-size:12px}.certificate-card>div>a{font-size:11px}.contact-details>div>span{font-size:10px}.contact-details>div>a,.contact-details>div>p{font-size:13px}footer>a:last-child{font-size:10px}
+
+.experience-description{max-width:650px;margin:10px 0 0!important}.timeline-main .text-link{display:inline-block;margin-top:12px}
