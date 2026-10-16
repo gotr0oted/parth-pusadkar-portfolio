@@ -1,65 +1,56 @@
-:root {
-  color-scheme: light;
-  --paper: #f5f3ee;
-  --ink: #202925;
-  --muted: #65716b;
-  --line: #d9d9d0;
-  --green: #b8d45f;
-  --deep: #25312b;
-  font-family: "DM Sans", Arial, sans-serif;
-}
-* { box-sizing: border-box; }
-body { margin: 0; min-height: 100vh; background: var(--paper); color: var(--ink); }
+.admin-view { min-height: 100vh; background: #f5f3ee; color: #202925; font-family: "DM Sans", Arial, sans-serif; }
+.admin-view * { box-sizing: border-box; }
 .admin-shell { width: min(1180px, calc(100% - 48px)); margin: 0 auto; padding: 34px 0 64px; }
-.back-link { color: var(--ink); text-decoration: none; font-size: 14px; }
+.back-link { color: #202925; text-decoration: none; font-size: 14px; }
 .back-link:hover { text-decoration: underline; }
 .admin-heading { padding: 52px 0 30px; }
-.eyebrow { color: #566f50; font: 11px/1.5 "DM Mono", Consolas, monospace; letter-spacing: .11em; }
-h1 { margin: 12px 0; font: 600 clamp(42px, 7vw, 76px)/1.02 Manrope, Arial, sans-serif; letter-spacing: -.06em; }
-h1 em { font-family: Georgia, serif; font-weight: 400; }
-.intro, .panel > p { color: var(--muted); }
-.panel, .stat-card, .notice { background: #fffefa; border: 1px solid var(--line); }
-.panel { padding: 28px; }
-.notice { padding: 18px 20px; color: #58440b; background: #fff5d7; }
-[hidden] { display: none !important; }
-.login-panel { width: min(460px, 100%); }
-.login-panel h2, .panel-heading h2 { margin: 0; font: 600 24px Manrope, Arial, sans-serif; }
-.login-panel form { display: grid; gap: 10px; margin-top: 24px; }
-.login-panel label { margin-top: 8px; font-size: 13px; font-weight: 600; }
-.login-panel input { width: 100%; border: 1px solid #bdc5bd; border-radius: 3px; padding: 13px 14px; color: var(--ink); font: inherit; background: white; }
-.login-panel input:focus { outline: 2px solid #758c46; outline-offset: 2px; }
-button { font: inherit; cursor: pointer; }
-.login-panel button { display: flex; justify-content: space-between; border: 0; margin-top: 10px; padding: 15px 18px; color: var(--ink); background: var(--green); font-weight: 600; }
-.login-panel button:disabled { opacity: .65; cursor: wait; }
-.form-message { min-height: 20px; color: #9b3226; font-size: 13px; }
-.dashboard-toolbar, .panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
-.dashboard-toolbar { margin: 16px 0; }
-.dashboard-toolbar p { display: flex; align-items: center; gap: 9px; font-size: 13px; color: var(--muted); }
-.live-dot { width: 9px; height: 9px; border-radius: 50%; background: #b0b7b1; }
-.live-dot.connected { background: #46a56a; box-shadow: 0 0 0 4px #46a56a22; }
-.sign-out { border: 1px solid var(--line); padding: 9px 13px; color: var(--ink); background: transparent; }
-.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 16px 0; }
-.stat-card { min-height: 130px; display: flex; flex-direction: column; justify-content: space-between; padding: 20px; }
-.stat-card span { color: var(--muted); font: 10px "DM Mono", Consolas, monospace; letter-spacing: .07em; }
-.stat-card strong { font: 600 42px Manrope, Arial, sans-serif; }
-.visits-panel { padding: 0; overflow: hidden; }
-.panel-heading { padding: 23px 26px; border-bottom: 1px solid var(--line); }
-.panel-heading .eyebrow { margin: 0 0 6px; }
-.panel-heading > span { color: var(--muted); font-size: 12px; }
-.table-wrap { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; text-align: left; white-space: nowrap; }
-th, td { padding: 13px 16px; border-bottom: 1px solid #e8e7e0; }
-th { color: var(--muted); background: #f9f8f3; font: 10px "DM Mono", Consolas, monospace; letter-spacing: .06em; }
-td { font-size: 13px; }
-tbody tr:last-child td { border-bottom: 0; }
-.empty-state { padding: 34px; text-align: center; color: var(--muted); }
-.privacy-note { margin-top: 18px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.admin-view .eyebrow { color: #566f50; font: 11px/1.5 "DM Mono", Consolas, monospace; letter-spacing: .11em; }
+.admin-view h1 { margin: 12px 0; font: 600 clamp(42px, 7vw, 76px)/1.02 Manrope, Arial, sans-serif; letter-spacing: -.06em; }
+.admin-view h1 em { font-family: Georgia, serif; font-weight: 400; }
+.admin-view .intro, .admin-view .panel > p { color: #65716b; }
+.admin-view .panel, .admin-view .stat-card, .admin-view .notice { background: #fffefa; border: 1px solid #d9d9d0; }
+.admin-view .panel { padding: 28px; }
+.admin-view .notice { padding: 18px 20px; color: #58440b; background: #fff5d7; }
+.admin-view [hidden] { display: none !important; }
+.admin-view .login-panel { width: min(460px, 100%); }
+.admin-view .login-panel h2, .admin-view .panel-heading h2 { margin: 0; font: 600 24px Manrope, Arial, sans-serif; }
+.admin-view .login-panel form { display: grid; gap: 10px; margin-top: 24px; }
+.admin-view .login-panel label { margin-top: 8px; font-size: 13px; font-weight: 600; }
+.admin-view .login-panel input { width: 100%; border: 1px solid #bdc5bd; border-radius: 3px; padding: 13px 14px; color: #202925; font: inherit; background: white; }
+.admin-view .login-panel input:focus { outline: 2px solid #758c46; outline-offset: 2px; }
+.admin-view button { font: inherit; cursor: pointer; }
+.admin-view .login-panel button { display: flex; justify-content: space-between; border: 0; margin-top: 10px; padding: 15px 18px; color: #202925; background: #b8d45f; font-weight: 600; }
+.admin-view .login-panel button:disabled { opacity: .65; cursor: wait; }
+.admin-view .form-message { min-height: 20px; color: #9b3226; font-size: 13px; }
+.admin-view .dashboard-toolbar, .admin-view .panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.admin-view .dashboard-toolbar { margin: 16px 0; }
+.admin-view .dashboard-toolbar p { display: flex; align-items: center; gap: 9px; font-size: 13px; color: #65716b; }
+.admin-view .live-dot { width: 9px; height: 9px; border-radius: 50%; background: #b0b7b1; }
+.admin-view .live-dot.connected { background: #46a56a; box-shadow: 0 0 0 4px #46a56a22; }
+.admin-view .sign-out { border: 1px solid #d9d9d0; padding: 9px 13px; color: #202925; background: transparent; }
+.admin-view .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 16px 0; }
+.admin-view .stat-card { min-height: 130px; display: flex; flex-direction: column; justify-content: space-between; padding: 20px; }
+.admin-view .stat-card span { color: #65716b; font: 10px "DM Mono", Consolas, monospace; letter-spacing: .07em; }
+.admin-view .stat-card strong { font: 600 42px Manrope, Arial, sans-serif; }
+.admin-view .visits-panel { padding: 0; overflow: hidden; }
+.admin-view .panel-heading { padding: 23px 26px; border-bottom: 1px solid #d9d9d0; }
+.admin-view .panel-heading .eyebrow { margin: 0 0 6px; }
+.admin-view .panel-heading > span { color: #65716b; font-size: 12px; }
+.admin-view .table-wrap { overflow-x: auto; }
+.admin-view table { width: 100%; border-collapse: collapse; text-align: left; white-space: nowrap; }
+.admin-view th, .admin-view td { padding: 13px 16px; border-bottom: 1px solid #e8e7e0; }
+.admin-view th { color: #65716b; background: #f9f8f3; font: 10px "DM Mono", Consolas, monospace; letter-spacing: .06em; }
+.admin-view td { font-size: 13px; }
+.admin-view tbody tr:last-child td { border-bottom: 0; }
+.admin-view .empty-state { padding: 34px; text-align: center; color: #65716b; }
+.admin-view .privacy-note { margin-top: 18px; color: #65716b; font-size: 12px; line-height: 1.6; }
+.admin-entry { font: 10px "DM Mono", Consolas, monospace; letter-spacing: .08em; }
 @media (max-width: 720px) {
   .admin-shell { width: min(100% - 30px, 1180px); padding-top: 24px; }
   .admin-heading { padding: 38px 0 20px; }
-  .stats-grid { grid-template-columns: 1fr; gap: 9px; }
-  .stat-card { min-height: 100px; }
-  .panel { padding: 20px; }
-  .visits-panel { padding: 0; }
-  .panel-heading { align-items: flex-start; padding: 20px; }
+  .admin-view .stats-grid { grid-template-columns: 1fr; gap: 9px; }
+  .admin-view .stat-card { min-height: 100px; }
+  .admin-view .panel { padding: 20px; }
+  .admin-view .visits-panel { padding: 0; }
+  .admin-view .panel-heading { align-items: flex-start; padding: 20px; }
 }

@@ -45,6 +45,8 @@
     if (error) console.info('Portfolio visit tracking is not configured yet.');
   }
 
-  recordPageView();
-  window.addEventListener('hashchange', recordPageView);
+  if (location.hash !== '#admin') recordPageView();
+  window.addEventListener('hashchange', () => {
+    if (location.hash !== '#admin') recordPageView();
+  });
 })();

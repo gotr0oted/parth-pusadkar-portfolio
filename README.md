@@ -8,7 +8,7 @@ A personal portfolio website introducing my education, skills, projects, interns
 - CSS3
 - JavaScript
 
-The portfolio is a static webpage. A small Supabase project provides the secure admin login and visitor-event database for the optional private dashboard at `admin.html`.
+The portfolio is a static webpage. A small Supabase project provides the secure admin login and visitor-event database for the optional private dashboard at `/#admin`.
 
 ## View it locally
 
@@ -25,9 +25,9 @@ The portfolio does not use Google Analytics. To activate its admin-only visitor 
 2. In the Supabase SQL Editor, run the contents of `supabase-setup.sql`.
 3. In Authentication → Users, create a confirmed user for `parthpusadkar1312@gmail.com` and set its password. Do not put the password in this repository.
 4. In `analytics-config.js`, set `supabaseUrl` to the project's URL and `supabaseAnonKey` to its public anon/publishable key. Never use a `service_role` or secret key in browser code.
-5. Publish the site. Open `/admin.html` and sign in with the Supabase admin user to see visit totals and live activity.
+5. Publish the site. Open `/#admin` and sign in with the Supabase admin user to see visit totals and live activity.
 
-The database permits anonymous visitors to add only limited visit metadata. Read access is restricted by row-level security to the administrator email above. The tracker records page path, timestamp, referrer host, device category, browser, and OS; it does not store IP addresses or exact device names. The dashboard page itself is not linked from the public portfolio, but it is protected by login and database policies.
+The database permits anonymous visitors to add only limited visit metadata. Read access is restricted by row-level security to the administrator email above. The tracker records page path, timestamp, referrer host, device category, browser, and OS; it does not store IP addresses or exact device names. The dashboard is accessible from the portfolio footer and is protected by login and database policies.
 
 ## Portfolio sections
 
