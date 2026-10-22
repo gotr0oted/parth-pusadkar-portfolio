@@ -47,6 +47,29 @@
       return user?.email?.toLowerCase() === config.adminEmail.toLowerCase();
     }
 
+    function pageName(path) {
+      const hash = String(path || '').split('#')[1]?.split(/[?&]/)[0]?.toLowerCase();
+      const pageNames = {
+        home: 'Home', about: 'About', education: 'Education', experience: 'Experience',
+        work: 'Projects', beyond: 'Research & certificates', contact: 'Contact'
+      };
+      return pageNames[hash] || (hash ? hash.replace(/[-_]/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase()) : 'Home');
+    }
+
+    function sourceSite(host) {
+      if (!host) return 'Direct / unknown';
+      const domain = String(host).toLowerCase().replace(/^www\./, '');
+      const knownSites = {
+        'tcs.com': 'TCS', 'amazon.com': 'Amazon', 'amazon.in': 'Amazon India',
+        'linkedin.com': 'LinkedIn', 'github.com': 'GitHub', 'google.com': 'Google',
+        'google.co.in': 'Google India', 'bing.com': 'Bing', 'microsoft.com': 'Microsoft',
+        'apple.com': 'Apple', 'ibm.com': 'IBM', 'infosys.com': 'Infosys',
+        'accenture.com': 'Accenture', 'facebook.com': 'Facebook', 'instagram.com': 'Instagram',
+        'x.com': 'X', 'twitter.com': 'X / Twitter'
+      };
+      return knownSites[domain] || domain;
+    }
+
     function renderRows(rows) {
       const body = document.querySelector('#visits-list');
       body.replaceChildren();
@@ -64,7 +87,7 @@
       for (const visit of rows.slice(0, 100)) {
         const row = document.createElement('tr');
         const time = new Intl.DateTimeFormat(undefined, { dateStyle: 'medium', timeStyle: 'medium' }).format(new Date(visit.created_at));
-        for (const value of [time, visit.page_path, visit.device_type, visit.browser, visit.operating_system, visit.referrer_host || 'Direct']) {
+        for (const value of [time, pageName(visit.page_path), visit.device_type, visit.browser, visit.operating_system, sourceSite(visit.referrer_host)]) {
           const cell = document.createElement('td');
           cell.textContent = String(value ?? '—');
           row.append(cell);
